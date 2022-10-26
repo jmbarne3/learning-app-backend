@@ -29,10 +29,8 @@ else:
     ALLOWED_HOSTS = []
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-# if not IS_HEROKU:
-#     DEBUG = True
+if not IS_HEROKU:
+    DEBUG = False
 
 
 # Application definition
@@ -188,7 +186,11 @@ LOGGING = {
         }
     },
     'loggers': {
-        'testlogger': {
+        '': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        },
+        'django': {
             'handlers': ['console'],
             'level': 'INFO',
         }
@@ -196,5 +198,5 @@ LOGGING = {
 }
 
 import django_on_heroku
-django_on_heroku.settings(locals())
+django_on_heroku.settings(locals(), logging=False)
 

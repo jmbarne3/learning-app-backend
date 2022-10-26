@@ -10,9 +10,7 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media
-staticfiles/admin
-staticfiles/rest_framework
-staticfiles/staticfiles.json
+staticfiles/
 node_modules/
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/

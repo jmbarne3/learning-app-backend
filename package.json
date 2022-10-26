@@ -1,0 +1,33 @@
+{
+  "name": "learning-app-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend django app for a programming focused programming application.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmbarne3/learning-app-backend.git"
+  },
+  "keywords": [
+    "django"
+  ],
+  "author": "Jim Barnes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jmbarne3/learning-app-backend/issues"
+  },
+  "homepage": "https://github.com/jmbarne3/learning-app-backend#readme",
+  "devDependencies": {
+    "bootstrap": "^5.2.2",
+    "clean-css-cli": "^5.6.1",
+    "concurrently": "^7.5.0",
+    "node-sass": "^7.0.3"
+  },
+  "scripts": {
+    "css": "npm run css:scss && npm run css:clean",
+    "css:scss": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 --include-path ./node_modules/ ./src/scss/style.scss ./staticfiles/css/style.css",
+    "css:clean": "cleancss --format breaksWith=lf --source-map --source-map-inline-sources --output ./staticfiles/css/style.min.css ./staticfiles/css/style.css",
+    "css:watch": "conc 'npm run css:scss:watch' 'npm run css:clean:watch'",
+    "css:scss:watch": "npm run css:scss && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 --include-path ./node_modules/ --watch ./src/scss/style.scss ./staticfiles/css/style.css",
+    "css:clean:watch": "cleancss --format breaksWith=lf --source-map --source-map-inline-sources --watch --output ./staticfiles/css/style.min.css ./staticfiles/css/style.css"
+  }
+}

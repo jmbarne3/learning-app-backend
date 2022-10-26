@@ -24,10 +24,10 @@
   },
   "scripts": {
     "css": "npm run css:scss && npm run css:clean",
-    "css:scss": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 --include-path ./node_modules/ ./src/scss/style.scss ./learningapp/dist/css/style.css",
-    "css:clean": "cleancss --format breaksWith=lf --source-map --source-map-inline-sources --output ./learningapp/dist/css/style.min.css ./learningapp/dist/css/style.css",
+    "css:scss": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 --include-path ./node_modules/ ./src/scss/style.scss ./learningapp/resources/css/style.css",
+    "css:clean": "cleancss --format breaksWith=lf --source-map --source-map-inline-sources --output ./learningapp/resources/css/style.min.css ./learningapp/resources/css/style.css",
     "css:watch": "conc 'npm run css:scss:watch' 'npm run css:clean:watch'",
-    "css:scss:watch": "npm run css:scss && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 --include-path ./node_modules/ --watch ./src/scss/style.scss ./learningapp/dist/css/style.css",
-    "css:clean:watch": "cleancss --format breaksWith=lf --source-map --source-map-inline-sources --watch --output ./learningapp/dist/css/style.min.css ./learningapp/dist/css/style.css"
+    "css:scss:watch": "npm run css:scss && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 --include-path ./node_modules/ --watch ./src/scss/style.scss ./learningapp/resources/css/style.css",
+    "css:clean:watch": "cleancss --format breaksWith=lf --source-map --source-map-inline-sources --watch --output ./learningapp/resources/css/style.min.css ./learningapp/resources/css/style.css"
   }
 }

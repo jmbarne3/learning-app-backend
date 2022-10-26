@@ -138,7 +138,7 @@ USE_TZ = True
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'learningapp/dist'
+    BASE_DIR / 'learningapp/resources'
 ]
 
 STATIC_URL = 'static/'
